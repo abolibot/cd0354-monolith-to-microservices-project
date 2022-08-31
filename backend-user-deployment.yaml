@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-user-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-user
+  template:
+    metadata:
+      labels:
+        app: backend-user
+    spec:
+      containers:
+        - name: backend-user
+          image: tobialaran/udagram-api-user:v4
+          imagePullPolicy: Always
+          resources: {}
+          envFrom: 
+            - configMapRef: 
+                name: env-configmap
+            - secretRef:
+                name: env-secret
+          ports:
+          - containerPort: 8080
