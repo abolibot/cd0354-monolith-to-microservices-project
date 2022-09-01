@@ -12,6 +12,10 @@ spec:
       labels:
         app: backend-feed
     spec:
+      volumes:
+        - name: aws-secret
+          secret:
+            secretName: aws-secret
       containers:
         - name: backend-feed
           image: tobialaran/udagram-api-feed:v4
@@ -23,4 +27,8 @@ spec:
             - secretRef:
                 name: env-secret
           ports:
-          - containerPort: 8080
+            - containerPort: 8080
+          volumeMounts:
+            - name: aws-secret
+              mountPath: "/root/.aws/"
+              readOnly: true
