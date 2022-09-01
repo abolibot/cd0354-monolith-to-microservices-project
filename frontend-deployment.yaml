@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: tobialaran/udagram-frontend:v4
+          image: tobialaran/udagram-frontend:v5
           imagePullPolicy: Always
           resources: {}
           ports:
