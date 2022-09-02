@@ -16,7 +16,13 @@ spec:
         - name: backend-user
           image: tobialaran/udagram-api-user:v4
           imagePullPolicy: Always
-          resources: {}
+          resources: 
+            limits:
+              cpu: '2'
+              memory: 2Gi
+            requests:
+              cpu: '1'
+              memory: 1Gi
           envFrom: 
             - configMapRef: 
                 name: env-configmap
