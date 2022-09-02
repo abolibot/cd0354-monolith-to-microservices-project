@@ -18,7 +18,7 @@ spec:
             secretName: aws-secret
       containers:
         - name: backend-feed
-          image: tobialaran/udagram-api-feed:v4
+          image: tobialaran/udagram-api-feed:v10
           imagePullPolicy: Always
           resources: {}
           envFrom: 
