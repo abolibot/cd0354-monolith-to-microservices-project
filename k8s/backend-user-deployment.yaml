@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend-user
-          image: tobialaran/udagram-api-user:v4
+          image: tobialaran/udagram-api-user:v10
           imagePullPolicy: Always
           resources: 
             limits:

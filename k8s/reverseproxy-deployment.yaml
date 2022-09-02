@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: reverseproxy
-          image: tobialaran/reverseproxy:v5
+          image: tobialaran/reverseproxy:v10
           imagePullPolicy: Always
           resources: {}
           ports:
